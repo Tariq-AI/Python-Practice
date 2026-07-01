@@ -6,9 +6,10 @@ if pin == Pass:
     process=int(input("Choose Process:\n(1)Withdraw\n(2)Check Balance\nNumber Of Process: "))
     
     if process == 1 :
-        balance=int(input("Enter The Balance: "))
-        if balance <= user_balance:
-            print(f"Done ,Your balance is : {user_balance-balance}")
+        withdrawl_amount=int(input("Enter Withdrawl Amount: "))
+        if withdrawl_amount <= user_balance:
+            user_balance-=withdrawl_amount
+            print(f"Done. Your balance is : {user_balance}")
         else:
             print("Sorry, Your balanece not enough")
              
